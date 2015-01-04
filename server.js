@@ -26,14 +26,6 @@ var server = http.createServer(function(request, response){
       response.end(data);
     });
   }
-
-  //   console.log(path.split("/"));
-  //   var readHtml = path.split("/").splice(1,1);
-  //   fs.readFile(readHtml.join(), function(err, data){
-  //     console.log(readHtml);
-  //     response.end(data);
-  //   })
-  // }
   else if (path.slice(path.length-4,path.length)===".css"){
     var readCss = path.split("/").splice(1,1);
     fs.readFile(readCss.join(), function(err, data){
