@@ -1,0 +1,137 @@
+<html>
+<head>
+  <title>
+    gooballee goo
+  </title>
+
+  <link rel="stylesheet" type="text/css" href="cloud.css">
+  <div>
+  <canvas id="the_canvas" width="400" height="400"></canvas>
+
+</div>
+  <script>
+
+  var canvas = document.getElementById('the_canvas');
+  var ctx = canvas.getContext('2d');
+  var y = 240;
+  var draw = function(){
+    y++;
+    //blue sky
+    ctx.fillStyle = "rgba(64,237,245,.1)";
+    ctx.fillRect(0,0, canvas.width, canvas.height);
+
+    //cloud left-bottom
+    ctx.beginPath();
+    ctx.arc(100,200,50,0,Math.PI*2,true);
+    ctx.fillStyle = "white";
+    ctx.fill();
+    ctx.lineWidth = .8;
+    ctx.strokeStyle = "white";
+    ctx.stroke();
+    //cloud mid-bottom
+    ctx.beginPath();
+    ctx.arc(170,200,50,0,Math.PI*2,true);
+    ctx.fillStyle = "white";
+    ctx.fill();
+    ctx.lineWidth = .8;
+    ctx.strokeStyle = "white";
+    ctx.stroke();
+    //cloud right-bottom
+    ctx.beginPath();
+    ctx.arc(240,200,50,0,Math.PI*2,true);
+    ctx.fillStyle = "white";
+    ctx.fill();
+    ctx.lineWidth = .8;
+    ctx.strokeStyle = "white";
+    ctx.stroke();
+    //cloud left-top
+    ctx.beginPath();
+    ctx.arc(135,150,50,0,Math.PI*2,true);
+    ctx.fillStyle = "white";
+    ctx.fill();
+    ctx.lineWidth = .8;
+    ctx.strokeStyle = "white";
+    ctx.stroke();
+    //cloud right-top
+    ctx.beginPath();
+    ctx.arc(205,150,50,0,Math.PI*2,true);
+    ctx.fillStyle = "white";
+    ctx.fill();
+    ctx.lineWidth = .8;
+    ctx.strokeStyle = "white";
+    ctx.stroke();
+    ctx.beginPath();
+    //cloud semi-circles
+    ctx.arc(190,155,25,0,Math.PI,true); // ctx.moveTo(124,210);
+    ctx.strokeStyle = "rgba(64,237,255,.5)";
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(120,190,25,0,Math.PI,true); // ctx.moveTo(124,210);
+    ctx.strokeStyle = "rgba(64,237,255,.5)";
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(220,210,25,0,Math.PI,true); // ctx.moveTo(124,210);
+    ctx.strokeStyle = "rgba(64,237,255,.5)";
+    ctx.stroke();
+
+    //rain
+    ctx.fillStyle = "rgba(64,25,245,.1)";
+    ctx.fillRect (100, (y + 10), 5, 5);
+    ctx.fillStyle = "rgba(64,25,245,.1)";
+    ctx.fillRect (140, y, 5, 5);
+    ctx.fillStyle = "rgba(64,25,245,.1)";
+    ctx.fillRect (180, (y + 10), 5, 5);
+    ctx.fillStyle = "rgba(64,25,245,.1)";
+    ctx.fillRect (225, (y + 5), 5, 5);
+    //function that returns rain to y coordinate 240px
+    if (y > 400) {
+      y = 240;
+    }
+  };
+  setInterval(draw, 1)
+
+  function flash(){
+    ctx.beginPath();
+    ctx.moveTo(240,235);
+    ctx.lineTo(300,350);
+    ctx.lineTo(190,235);
+    ctx.fillStyle = "yellow";
+    ctx.fill();
+    setTimeout(flash, 1000);
+  };
+  flash();
+
+
+
+</script>
+
+</head>
+<body>
+  <header>
+    <h3>Gooday</h3>
+  </header>
+  <ul>
+    <li class="mammal big">mouse</li>
+    <li class="bird">canary</li>
+    <li class="bird">penguin</li>
+    <li class=fish>salmon</li>
+    <li class="mammal">cat</li>
+    <li class=fish>goldfish</li>
+    <li class="mammal">dog</li>
+    <li class="mammal">sheep</li>
+    <li class="bird">parakeet</li>
+    <li class=fish>tuna</li>
+  </ul>
+  <ol>
+    <li class="mammal" id="ham">something</li>
+    <li class="fish">here</li>
+    <li class="mammal">goes</li>
+  </ol>
+
+  <footer>
+    this is the end
+  </footer>
+</body>
+</html>
+<!--h1 is a selector
+<!--class is an attribute
