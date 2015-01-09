@@ -1,5 +1,5 @@
-//var ws = new WebSocket("ws://localhost:3000"); // ws://will.princesspeach.nyc:3000
-var ws = new WebSocket("ws://will.princesspeach.nyc:3000");
+var ws = new WebSocket("ws://localhost:3000"); // ws://will.princesspeach.nyc:3000
+// var ws = new WebSocket("ws://will.princesspeach.nyc:3000");
 var body = document.querySelector("body");
 var input = document.querySelector("input");
 var ul = document.createElement("ul");
